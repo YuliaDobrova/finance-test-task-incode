@@ -1,5 +1,5 @@
 import React from 'react';
-import TickersList from './tickersList/TickersList';
+import TickersList from './TickersList/TickersList';
 
 const App = () => {
   return <TickersList />;

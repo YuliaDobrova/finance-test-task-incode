@@ -11,6 +11,12 @@ const TickersListItemStyled = styled.div`
     background-color: #154c79;
     box-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
   }
+  .PriceLow {
+    color: tomato;
+  }
+  .PriceHigh {
+    color: green;
+  }
 `;
 
 export default TickersListItemStyled;
