@@ -7,7 +7,7 @@ import { stopConnection } from '../../redux/tickers/tickersActions';
 import ButtonStyled from './ConnectionButtonStyled';
 import sprite from './sprite.svg';
 
-const Button = () => {
+const ConnectionButton = () => {
   const dispatch = useDispatch();
   const connect = useSelector(connectionSelector);
   const [isConnected, setIsConnected] = useState(true);
@@ -26,7 +26,7 @@ const Button = () => {
     <ButtonStyled>
       <button
         type="button"
-        className="Button"
+        className="ConnectionButton"
         onClick={() => setIsConnected(!isConnected)}
       >
         {isConnected ? 'Disconnect' : 'Connect'}
@@ -38,4 +38,4 @@ const Button = () => {
   );
 };
 
-export default Button;
+export default ConnectionButton;

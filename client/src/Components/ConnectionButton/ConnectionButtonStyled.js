@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ButtonStyled = styled.div`
-  .Button {
+  .ConnectionButton {
     position: relative;
     display: flex;
     margin-left: auto;
@@ -25,8 +25,8 @@ const ButtonStyled = styled.div`
 
     text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75);
   }
-  .Button:hover,
-  .Button:focus {
+  .ConnectionButton:hover,
+  .ConnectionButton:focus {
     color: palegreen;
     transform: scale(1.05);
   }
