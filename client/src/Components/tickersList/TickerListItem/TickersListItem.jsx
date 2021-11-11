@@ -36,5 +36,5 @@ TickersListItem.propTypes = {
   change_percent: PropTypes.string.isRequired,
   dividend: PropTypes.string.isRequired,
   yield: PropTypes.string.isRequired,
-  oldPrice: PropTypes.string.isRequired,
+  oldPrice: PropTypes.string,
 };

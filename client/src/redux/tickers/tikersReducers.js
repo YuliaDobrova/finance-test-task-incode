@@ -1,5 +1,5 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { getTickersSuccess } from './tickersActions';
+import { getTickersSuccess, stopConnection } from './tickersActions';
 
 const initialState = {
   prevTickers: [],
@@ -13,4 +13,13 @@ const tickersReducer = createReducer(initialState, {
   }),
 });
 
-export default tickersReducer;
+const connectionReducer = createReducer(false, {
+  [getTickersSuccess]: (_, { payload }) => Boolean(payload),
+  [stopConnection]: (_, __) => false,
+});
+
+const reducers = {
+  tickersReducer,
+  connectionReducer,
+};
+export default reducers;

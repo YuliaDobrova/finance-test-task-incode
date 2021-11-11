@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
-import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 import { v4 } from 'uuid';
 
-import { getTickers } from '../../redux/tickers/tickersSelectors';
-import fetchTickers from '../../redux/tickers/tickersOperations';
+import { getTickersSelector } from '../../redux/tickers/tickersSelectors';
+import { fetchTickers } from '../../redux/tickers/tickersOperations';
 import TickersListItem from './TickerListItem/TickersListItem';
 import TickerWrapper from './TickersListStyled';
 
@@ -15,7 +14,7 @@ const TickersList = () => {
     dispatch(fetchTickers());
   }, [dispatch]);
 
-  const { prevTickers, currentTickers } = useSelector(getTickers);
+  const { prevTickers, currentTickers } = useSelector(getTickersSelector);
   const prevPrices = prevTickers.map(ticker => ticker.price);
 
   return (
@@ -44,4 +43,4 @@ const TickersList = () => {
   );
 };
 
-export default connect()(TickersList);
+export default TickersList;
