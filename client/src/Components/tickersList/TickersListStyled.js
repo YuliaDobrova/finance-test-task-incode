@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 const TickerWrapper = styled.div`
-  height: 100vh;
-  background-color: #063970;
+  height: 430px;
   .TickerTitle {
     font-size: 40px;
     text-transform: uppercase;

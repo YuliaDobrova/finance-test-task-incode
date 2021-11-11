@@ -1,8 +1,14 @@
-import React from 'react';
+import Container from './Container/Container';
 import TickersList from './TickersList/TickersList';
+import ConnectionButton from './ConnectionButton';
 
 const App = () => {
-  return <TickersList />;
+  return (
+    <Container>
+      <TickersList />
+      <ConnectionButton />
+    </Container>
+  );
 };
 
 export default App;

@@ -3,10 +3,11 @@ import {
   getTickersRequest,
   getTickersSuccess,
   getTickersError,
+  setConnection,
 } from './tickersActions';
 
 const fetchTickers = () => {
-  const action = async dispatch => {
+  const actionFetch = async dispatch => {
     dispatch(getTickersRequest());
     try {
       socket.connect(socket.emit('start'));
@@ -17,7 +18,14 @@ const fetchTickers = () => {
       dispatch(getTickersError(error.message));
     }
   };
-  return action;
+  return actionFetch;
 };
 
-export default fetchTickers;
+const connectionOperation = () => {
+  const actionConnect = async dispatch => {
+    dispatch(setConnection());
+  };
+  return actionConnect;
+};
+
+export { fetchTickers, connectionOperation };
